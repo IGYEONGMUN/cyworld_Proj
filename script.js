@@ -29,6 +29,14 @@ menuHome.addEventListener("click", homeChange);
 menuGame.addEventListener("click", gameChange);
 menuJukebox.addEventListener("click", jukeboxChange);
 
+//cursor
+const cursor = document.querySelector("#cursor-icon");
+
+
+document.addEventListener("mousemove",(e)=>{
+  cursor.style.transform = `translate(${e.clientX+10}px, ${e.clientY+10}px)`;
+})
+
 // count event
 const getFormattedDate = () => {
   const date = new Date();
